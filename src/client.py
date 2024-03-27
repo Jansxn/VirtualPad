@@ -31,7 +31,7 @@ option = -1
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM) 
 
 # Define the host and the port on which the server is running
-host = '192.168.205.120'
+host = socket.gethostname()
 port = 8485
 
 # Connect to the server

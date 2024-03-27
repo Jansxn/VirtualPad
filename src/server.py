@@ -122,8 +122,7 @@ finger_options = [
     [0, 0, 0, 0, 0],  # Draggin Mode
 ]
 
-# HOST ='10.90.2.127'
-HOST = "192.168.205.120"
+HOST = socket.gethostname()
 PORT = 8485
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 print("Socket created")
