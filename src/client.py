@@ -31,7 +31,7 @@ option = -1
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM) 
 
 # Define the host and the port on which the server is running
-host = '10.90.2.127'
+host = '192.168.205.120'
 port = 8485
 
 # Connect to the server
@@ -44,7 +44,8 @@ while True:
     # If data is received, decode it and split it
     if data:
         data_str = data.decode()
-        option, x1, y1 = data_str.split(',')
+        print(data_str)
+        option, x1, y1, *_ = data_str.split(',')
         x1 = int(x1)
         y1 = int(y1)
         print('Received option:', option)
